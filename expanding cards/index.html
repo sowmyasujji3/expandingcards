@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sowmya's Expanding cards</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image active" style="background-image: url(images/ganesh1.jpg)">
+        <h3>shreya</h3>
+      </div>
+      <div class="image active" style="background-image: url(images/ganesh2.jpg)">
+        <h3></h3>
+      </div>
+      <div class="image active" style="background-image: url(images/ganesh3.jpg)">
+        <h3></h3>
+      </div>
+      <div class="image active" style="background-image: url(images/ganesh4.jpg)">
+        <h3></h3>
+      </div>
+      <div
+        class="image active"
+        style="background-image: url(images/ganesh5..jpg.crdownload)"
+      >
+        <h3></h3>
+      </div>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".image");
+
+      images.forEach((image) => {
+        image.addEventListener("click", () => {
+          removeActiveClasses();
+          image.classList.add("active");
+        });
+      });
+
+      const removeActiveClasses = () => {
+        images.forEach((image) => {
+          image.classList.remove("active");
+        });
+      };
+    </script>
+  </body>
+</html>
